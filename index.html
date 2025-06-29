@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>H4X3D BY C00LKIDD</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: lime;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 20vh;
+      text-shadow: 0 0 10px red, 0 0 20px lime;
+      animation: glitch 0.3s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-2px, -2px); }
+      80% { transform: translate(2px, 2px); }
+      100% { transform: translate(0); }
+    }
+
+    .image-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .c00lkidd {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      animation: spin 2s linear infinite, jump 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes jump {
+      0% { top: 20%; }
+      100% { top: 50%; }
+    }
+  </style>
+</head>
+<body>
+  <h1>¥U H4V3 B33M H4X33DD!!11!!1!1!</h1>
+
+  <div class="image-container" id="images"></div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1fdc4701cb.mp3?filename=spooky-scary-skeletons-41874.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <script>
+    const container = document.getElementById('images');
+    for (let i = 0; i < 10; i++) {
+      const img = document.createElement('img');
+      img.src = 'https://tr.rbxcdn.com/3e5f4c689c62d87f406d1fa08c03a19c/420/420/AvatarHeadshot/Png';
+      img.className = 'c00lkidd';
+      img.style.left = Math.random() * 90 + '%';
+      img.style.top = Math.random() * 80 + '%';
+      container.appendChild(img);
+    }
+  </script>
+</body>
+  </html>
